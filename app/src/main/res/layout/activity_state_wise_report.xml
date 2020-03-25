@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StateWiseReport"
-    >
+    tools:context=".StateWiseReport">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +18,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/g"
             android:text="Covid-19 India Cases"
             android:textColor="#000"
             android:textSize="25sp"
@@ -29,12 +27,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txt_updated"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="12dp"
-            android:fontFamily="@font/a"
+            android:text="Last Updated: March 24 2020 At 20:20"
             android:textColor="#000"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,12 +75,11 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txt_total"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="4dp"
-                            android:fontFamily="@font/a"
+                            android:text="5900"
                             android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
@@ -91,7 +88,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:text="Total"
                             android:textColor="@android:color/primary_text_light"
                             android:textSize="15sp" />
@@ -116,13 +112,11 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txt_active"
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="4dp"
-                            android:fontFamily="@font/a"
+                            android:text="590"
                             android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
@@ -131,7 +125,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:text="Active"
                             android:textColor="#000"
                             android:textSize="15sp" />
@@ -164,13 +157,11 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txt_recovered"
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="4dp"
-                            android:fontFamily="@font/a"
+                            android:text="590"
                             android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
@@ -179,7 +170,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:text="Recovered"
                             android:textColor="#000"
                             android:textSize="15sp" />
@@ -204,13 +194,11 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txt_deaths"
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="4dp"
-                            android:fontFamily="@font/a"
+                            android:text="590"
                             android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
@@ -219,7 +207,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:text="Deaths"
                             android:textColor="#000"
                             android:textSize="15sp" />
@@ -237,8 +224,6 @@
                 android:padding="5dp">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_today"
-
                     android:layout_width="125dp"
                     android:layout_height="105dp"
                     app:cardElevation="10dp"
@@ -257,19 +242,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:gravity="center"
                             android:text="Today Status"
                             android:textColor="#000"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_tests"
-
                     android:layout_width="125dp"
                     android:layout_height="105dp"
                     app:cardElevation="10dp"
@@ -289,12 +270,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:gravity="center"
                             android:text="Tests Report"
                             android:textColor="#000"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -309,13 +288,12 @@
                 android:padding="5dp">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_state"
                     android:layout_width="125dp"
                     android:layout_height="105dp"
+                    app:cardElevation="10dp"
                     android:layout_margin="15dp"
                     android:padding="5dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="10dp">
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -328,24 +306,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:gravity="center"
                             android:text="State Wise Report"
                             android:textColor="#000"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_district"
                     android:layout_width="125dp"
                     android:layout_height="105dp"
+                    app:cardElevation="10dp"
                     android:layout_margin="15dp"
                     android:padding="5dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="10dp">
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -360,12 +335,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:gravity="center"
                             android:text="District Wise Report"
                             android:textColor="#000"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -381,13 +354,12 @@
                 android:padding="5dp">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_myths"
                     android:layout_width="125dp"
                     android:layout_height="105dp"
+                    app:cardElevation="10dp"
                     android:layout_margin="15dp"
                     android:padding="5dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="10dp">
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -401,24 +373,21 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:baselineAligned="false"
-                            android:fontFamily="@font/d"
                             android:gravity="center"
                             android:text="Myths Buster"
                             android:textColor="#000"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_about"
                     android:layout_width="125dp"
                     android:layout_height="105dp"
+                    app:cardElevation="10dp"
                     android:layout_margin="15dp"
                     android:padding="5dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="10dp">
+                    app:cardCornerRadius="8dp">
 
 
                     <LinearLayout
@@ -433,12 +402,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/d"
                             android:gravity="center"
-                            android:text="Info "
+                            android:text="About"
                             android:textColor="#000"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>

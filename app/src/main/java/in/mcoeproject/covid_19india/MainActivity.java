@@ -1,11 +1,14 @@
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -20,7 +23,8 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txt_total, txt_active, txt_recovered, txt_deaths, txt_updated, txt_tests, txt_today;
+    private TextView txt_total, txt_active, txt_recovered, txt_deaths, txt_updated;
+    private CardView card_today, card_tests, card_about, card_state, card_district, card_myths;
     private RequestQueue requestQueue;
     private JSONObject response1;
     @Override
@@ -28,20 +32,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt_active=findViewById(R.id.txt_positive_cases);
-        txt_total=findViewById(R.id.txt_total_tests);
-        txt_recovered=findViewById(R.id.txt_deaths_today);
+        txt_total=findViewById(R.id.txt_total);
+        txt_active=findViewById(R.id.txt_active);
+        txt_recovered=findViewById(R.id.txt_recovered);
         txt_deaths=findViewById(R.id.txt_deaths);
-        txt_updated=findViewById(R.id.txt_updated_tests);
-        txt_tests=findViewById(R.id.txt_tests);
-        txt_today=findViewById(R.id.txt_today);
+        txt_updated=findViewById(R.id.txt_updated);
+        card_today=findViewById(R.id.card_today);
+        card_tests=findViewById(R.id.card_tests);
+        card_about=findViewById(R.id.card_about);
+        card_state=findViewById(R.id.card_state);
+        card_district=findViewById(R.id.card_district);
+        card_myths=findViewById(R.id.card_myths);
 
 
         requestQueue= Volley.newRequestQueue(this);
 
         parseJson();
 
-        txt_today.setOnClickListener(new View.OnClickListener() {
+        card_today.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, TodayCases.class);
@@ -61,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        txt_tests.setOnClickListener(new View.OnClickListener() {
+        card_tests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, TestsReport.class);
@@ -78,6 +86,39 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        card_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, AboutUs.class);
+                startActivity(intent);
+            }
+        });
+
+        card_state.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Coming Soon...", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        card_district.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Coming Soon...", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        card_myths.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Coming Soon...", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
     }
 
     private void parseJson() {
@@ -93,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray array=response.getJSONArray("statewise");
                     JSONObject object=array.getJSONObject(0);
 
+                    Log.d("dataaa", object.toString());
                     txt_active.setText(object.getString("active"));
                     txt_total.setText(object.getString("confirmed"));
                     txt_recovered.setText(object.getString("recovered"));

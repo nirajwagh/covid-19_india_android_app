@@ -13,12 +13,13 @@
         android:fontFamily="@font/h"
         android:gravity="center|top"
         android:padding="5dp"
-        android:text="Covid-19 India app provides the current number of Covid-19 cases in India along with some other details.
+        android:text="The data displayed is not official Government data.
        \n\nThe data is gathered from covid19india.org, a website developed by a group of volunteers who are constantly updating the data using news from state press releases.
         \n\nA big thanks to them. \n\nVisit their website at: \nhttps://www.covid19india.org
         \n\nLicenses
-        \n\nCorona Animation : @Itay Alon / LottieFiles
-        \n\nInfo Animation : @Bamdad / LottieFiles
+        \n\nCorona Animation : Itay Alon - LottieFiles
+        \n\nInfo Animation : Bamdad - LottieFiles
+        \n\nDance Animation: Enora Roseward - LottieFiles
 \n\nThis app is completely ad-free and we do not collect any data of users, not even their first name."
         android:textColor="#000"
         android:textSize="14sp"

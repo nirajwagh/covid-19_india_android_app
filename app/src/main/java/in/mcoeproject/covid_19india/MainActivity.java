@@ -3,13 +3,16 @@ package in.mcoeproject.covid_19india;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.animation.content.Content;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private CardView card_today, card_tests, card_about, card_state, card_district, card_myths;
     private RequestQueue requestQueue;
     private JSONObject response1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
         card_district=findViewById(R.id.card_district);
         card_myths=findViewById(R.id.card_myths);
 
+        Toast toast1=Toast.makeText(this, "Not Official Government data. Visit Info.", Toast.LENGTH_LONG);
+        toast1.setGravity(Gravity.CENTER, 0, 0);
+        toast1.show();
 
         requestQueue= Volley.newRequestQueue(this);
-
         parseJson();
 
         card_today.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +71,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
             }
         });
 
@@ -83,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         });
 
@@ -98,15 +102,16 @@ public class MainActivity extends AppCompatActivity {
         card_state.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Coming Soon...", Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(MainActivity.this, StateWiseReport.class);
+                startActivity(intent);
             }
         });
 
         card_district.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Coming Soon...", Toast.LENGTH_LONG).show();
-
+                Intent intent=new Intent(MainActivity.this, SelectState.class);
+                startActivity(intent);
             }
         });
 
@@ -117,19 +122,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     private void parseJson() {
         String url="https://api.covid19india.org/data.json";
-
         JsonObjectRequest request=new JsonObjectRequest(Request.Method.GET, url, null
                 , new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 response1=response;
-
                 try {
                     JSONArray array=response.getJSONArray("statewise");
                     JSONObject object=array.getJSONObject(0);

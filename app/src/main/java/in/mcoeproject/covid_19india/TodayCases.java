@@ -19,8 +19,6 @@ public class TodayCases extends AppCompatActivity {
         txt_recovered_tod=findViewById(R.id.txt_recovered_tod);
         txt_updated_today=findViewById(R.id.txt_updated_today);
 
-
-
         String confirmed=getIntent().getStringExtra("confirmed");
         String deaths=getIntent().getStringExtra("deaths");
         String recovered=getIntent().getStringExtra("recovered");

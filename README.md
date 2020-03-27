@@ -1,8 +1,8 @@
 # covid-19_india_android_app
 
-NOTE: This is initial commit of the app. App will be updated in 2-3 days.
 
-An android app for displaying current status of Covid_19 patients in India.
+
+Covid-19 India cases Tracker Android Application.
 
 All data is fetched from the API provided by covid19india.org
 
@@ -16,4 +16,4 @@ Visit their webiste at: https://www.covid19india.org/
 
 ![Cases Today](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/four.png)
 
-![Cases Today](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/four.png)
+![Cases Today](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/five.png)

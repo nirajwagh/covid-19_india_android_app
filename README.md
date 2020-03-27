@@ -12,6 +12,8 @@ Visit their webiste at: https://www.covid19india.org/
 
 My Email : iamnirajwagh@gmail.com
 
+Download apk: https://github.com/nirajwagh/covid-19_india_android_app/raw/master/apk%20download/Covid-19%20India.apk
+
 ![Splash Screen](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/one.png)
 
 ![Home Screen](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/two.png)

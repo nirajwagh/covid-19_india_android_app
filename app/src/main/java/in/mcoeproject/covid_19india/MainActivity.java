@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, TodayCases.class);
                 try {
-                    JSONArray array=response1.getJSONArray("key_values");
+                    JSONArray array=response1.getJSONArray("statewise");
                     JSONObject object=array.getJSONObject(0);
-                    intent.putExtra("confirmed", object.getString("confirmeddelta"));
-                    intent.putExtra("deaths", object.getString("deceaseddelta"));
+                    intent.putExtra("confirmed", object.getString("deltaconfirmed"));
+                    intent.putExtra("deaths", object.getString("deltadeaths"));
                     intent.putExtra("lastUpdated", object.getString("lastupdatedtime"));
-                    intent.putExtra("recovered", object.getString("recovereddelta"));
+                    intent.putExtra("recovered", object.getString("deltarecovered"));
                     startActivity(intent);
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -1,6 +1,6 @@
 # covid-19_india_android_app
 
-[<img src="http://www.google.com.au/images/nav_logo7.png">](http://google.com.au/)
+[<img src="https://github.com/nirajwagh/assets/raw/master/Octocat.png">](http://google.com.au/)
 
 Covid-19 India cases Tracker Android Application.
 

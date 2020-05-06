@@ -1,6 +1,6 @@
 # covid-19_india_android_app
 
-[<img src="https://github.com/nirajwagh/assets/raw/master/google-play-badge.png">](http://google.com.au/) /t/t  [<img src="https://github.com/nirajwagh/assets/raw/master/1200px-YouTube_play_buttom_icon_(2013-2017).svg.png">](http://google.com.au/)   [<img src="https://github.com/nirajwagh/assets/raw/master/unnamed.png">](http://google.com.au/)
+[<img src="https://github.com/nirajwagh/assets/raw/master/google-play-badge.png">](http://google.com.au/) /t/t  [<img src="https://github.com/nirajwagh/assets/raw/master/1200px-YouTube_play_buttom_icon_(2013-2017).svg.png">](http://google.com.au/)   [<img src="https://github.com/nirajwagh/assets/raw/master/unnamed.png">](http://google.com.au/) 
 
 Covid-19 India cases Tracker Android Application.
 

@@ -9,7 +9,7 @@ A big thank you to covid19india.org for the api.
 
 Visit their webiste at: https://www.covid19india.org/
 
-My Email : iamnirajwagh@gmail.com
+My Email : theminimaldeveloper@gmail.com
 
 App Demo On Youtube: https://www.youtube.com/watch?v=yZQINk9GnR8
 

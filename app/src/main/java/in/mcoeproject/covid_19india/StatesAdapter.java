@@ -1,3 +1,5 @@
+//Adapter for the recyclerview for displaying states.
+
 package in.mcoeproject.covid_19india;
 
 import android.content.Context;

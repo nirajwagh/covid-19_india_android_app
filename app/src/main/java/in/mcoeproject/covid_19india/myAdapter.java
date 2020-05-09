@@ -1,3 +1,5 @@
+//Adapter for displaying the states.
+
 package in.mcoeproject.covid_19india;
 
 import android.view.LayoutInflater;
@@ -26,6 +28,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int i) {
+        //Incrementing 'i' because the fetched api array states starts from position '1' not '0'.
         i++;
         String stateName=stateData[i].getStateName();
         String confirmed=stateData[i].getConfirmed();

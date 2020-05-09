@@ -1,3 +1,5 @@
+//Java class for the splash screen
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +25,7 @@ public class Splash extends AppCompatActivity {
         txt_error=findViewById(R.id.txt_error);
         txt_error.setVisibility(View.INVISIBLE);
 
+        //Checking is device os version for network connectivity notification.
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             confirmInternetConnection(4150);
         }else{
@@ -65,6 +68,7 @@ public class Splash extends AppCompatActivity {
     }
 
 
+    //Method for checking the network connectivity.
     private boolean checkForInternetConnection() {
 
         ConnectivityManager connectivityManager=(ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

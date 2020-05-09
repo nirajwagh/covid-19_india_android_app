@@ -1,14 +1,16 @@
+//Java model class for states cases details.
+
 package in.mcoeproject.covid_19india;
 
 
 public class StateData {
 
-    String state;
-    String confirmed;
-    String active;
-    String recovered;
-    String deaths;
-    String lastupdatedtime;
+    private String state;
+    private String confirmed;
+    private String active;
+    private String recovered;
+    private String deaths;
+    private String lastupdatedtime;
 
     public StateData(String state, String confirmed, String active, String recovered, String deaths, String lastupdatedtime) {
         this.state = state;

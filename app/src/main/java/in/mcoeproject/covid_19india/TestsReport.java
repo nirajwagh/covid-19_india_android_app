@@ -1,3 +1,5 @@
+//Java class for the activity for displaying the total tests.
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,7 @@ public class TestsReport extends AppCompatActivity {
         txt_total_tests=findViewById(R.id.txt_total_tests);
         txt_updated_tes=findViewById(R.id.txt_updated_tes);
 
+        //Accessing the data passed by home activity.
         String totalCases=getIntent().getStringExtra("totalsamplestested");
         String lastUpdated=getIntent().getStringExtra("lastUpdated");
 

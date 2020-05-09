@@ -1,25 +1,21 @@
+//Java class for the Home activity.
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.airbnb.lottie.animation.content.Content;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txt_total, txt_active, txt_recovered, txt_deaths, txt_updated;
     private CardView card_today, card_tests, card_about, card_state, card_district, card_myths;
-    private RequestQueue requestQueue;
-    private JSONObject response1;
 
+    //RequestQueue object declaration for fetching the data from API.
+    private RequestQueue requestQueue;
+
+    //JSONObject declaration for storing the fetched data.
+    private JSONObject response1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
         toast1.setGravity(Gravity.CENTER, 0, 0);
         toast1.show();
 
+        //Creating a new Volley request for fetching the data.
         requestQueue= Volley.newRequestQueue(this);
+
+        //Calling the method for fetching the data.
         parseJson();
 
         card_today.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +63,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, TodayCases.class);
                 try {
+
+                    //Fetching a JSONArray "statewise: from the API.
                     JSONArray array=response1.getJSONArray("statewise");
                     JSONObject object=array.getJSONObject(0);
+
+                    //Passing the fetched data to TodayCases activity.
                     intent.putExtra("confirmed", object.getString("deltaconfirmed"));
                     intent.putExtra("deaths", object.getString("deltadeaths"));
                     intent.putExtra("lastUpdated", object.getString("lastupdatedtime"));
@@ -123,8 +129,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Method for fetching the API data.
     private void parseJson() {
+
+        //Url for fetching the data.
         String url="https://api.covid19india.org/data.json";
+
+        //Fetching JSON Object from the API.
         JsonObjectRequest request=new JsonObjectRequest(Request.Method.GET, url, null
                 , new Response.Listener<JSONObject>() {
             @Override
@@ -133,8 +144,6 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONArray array=response.getJSONArray("statewise");
                     JSONObject object=array.getJSONObject(0);
-
-                    Log.d("dataaa", object.toString());
                     txt_active.setText(object.getString("active"));
                     txt_total.setText(object.getString("confirmed"));
                     txt_recovered.setText(object.getString("recovered"));
@@ -153,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Adding the request to the RequestQueue object.
         requestQueue.add(request);
     }
 }

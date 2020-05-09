@@ -1,17 +1,11 @@
+//Java class for the activity FOr displaying state wise report.
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Adapter;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -20,7 +14,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +23,6 @@ public class StateWiseReport extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RequestQueue requestQueue;
     private  StateData[] stateData;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +45,8 @@ public class StateWiseReport extends AppCompatActivity {
                     JSONArray array=response.getJSONArray("statewise");
                     GsonBuilder gsonBuilder=new GsonBuilder();
                     Gson gson=gsonBuilder.create();
+
+                    //Using Gson library to convert JSON array to JAVA class objects array.
                     stateData=gson.fromJson(String.valueOf(array), StateData[].class);
                     recyclerView.setAdapter(new myAdapter(stateData));
                 } catch (JSONException e) {

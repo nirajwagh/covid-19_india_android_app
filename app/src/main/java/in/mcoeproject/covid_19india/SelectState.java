@@ -1,9 +1,10 @@
+//Java class for the activity for selecting the state to display the data.
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 
 public class SelectState extends AppCompatActivity {

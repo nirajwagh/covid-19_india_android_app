@@ -1,7 +1,8 @@
+//Java class for the About Us activity.
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class AboutUs extends AppCompatActivity {

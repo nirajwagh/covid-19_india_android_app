@@ -1,3 +1,5 @@
+//Adapter for displaying the districts using Recyclerview.
+
 package in.mcoeproject.covid_19india;
 
 import android.view.LayoutInflater;
@@ -9,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DistrictAdapter extends RecyclerView.Adapter<DistrictAdapter.myViewHolder>{
 
-    String districts[], cases[];
+    private String districts[], cases[];
 
     public DistrictAdapter(String[] districts, String[] cases) {
         this.districts = districts;
@@ -20,12 +22,16 @@ public class DistrictAdapter extends RecyclerView.Adapter<DistrictAdapter.myView
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater=LayoutInflater.from(parent.getContext());
+
+        //Inflating the district_list.xml file for displaying the district.
         View view=layoutInflater.inflate(R.layout.district_list, parent, false);
         return new myViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
+
+        //Accessing and assigning the current recyclerview item at position "position".
         String districtName=districts[position];
         String confirmedCases=cases[position];
         holder.txt_district_name.setText(districtName);

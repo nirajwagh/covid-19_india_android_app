@@ -1,3 +1,5 @@
+//Java class for total cases activity.
+
 package in.mcoeproject.covid_19india;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,7 @@ public class TodayCases extends AppCompatActivity {
         txt_recovered_tod=findViewById(R.id.txt_recovered_tod);
         txt_updated_today=findViewById(R.id.txt_updated_today);
 
+        //Accessing the data passed by Home activity/MainActivity.
         String confirmed=getIntent().getStringExtra("confirmed");
         String deaths=getIntent().getStringExtra("deaths");
         String recovered=getIntent().getStringExtra("recovered");

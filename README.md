@@ -1,7 +1,6 @@
 # covid-19_india_android_app
 
 
-
 Covid-19 India cases Tracker Android Application.
 
 All data is fetched from the API provided by covid19india.org

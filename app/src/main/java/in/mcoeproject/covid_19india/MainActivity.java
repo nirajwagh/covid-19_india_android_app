@@ -81,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONArray array=response1.getJSONArray("tested");
                     JSONObject object=array.getJSONObject(array.length()-1);
-                    intent.putExtra("totalIndividuals", object.getString("totalindividualstested"));
-                    intent.putExtra("totalPositive", object.getString("totalpositivecases"));
+                    intent.putExtra("totalsamplestested", object.getString("totalsamplestested"));
                     intent.putExtra("lastUpdated", object.getString("updatetimestamp"));
                     startActivity(intent);
                 } catch (JSONException e) {

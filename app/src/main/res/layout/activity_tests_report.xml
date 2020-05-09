@@ -41,7 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_updated_tes">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,34 +59,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/txt_total_tests_rep"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/l"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/d"
-                    android:text="Total Tests"
-                    android:textColor="#000"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/txt_positive_cas"
+                    android:id="@+id/txt_total_tests"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/l"
@@ -99,9 +72,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/d"
-                    android:text="Total Positive Cases"
+                    android:text="Total Tests"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

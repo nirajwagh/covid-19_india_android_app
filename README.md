@@ -27,6 +27,10 @@ The original **COVID19India API service is no longer active**, so some functiona
 
 This repository is preserved as a portfolio and learning project.
 
+## YouTube Demo
+
+**[Youtube Demo](https://www.youtube.com/watch?v=yZQINk9GnR8)**
+
 ## Download
 
 **[Download APK](https://github.com/nirajwagh/covid-19_india_android_app/releases/latest)**

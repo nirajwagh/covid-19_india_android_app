@@ -1,25 +1,43 @@
-# covid-19_india_android_app
+# COVID-19 India Android App
 
+An Android app for tracking **COVID-19 cases in India** with state-wise reports, testing information, and daily case updates.
 
+The app was built to provide a simple and lightweight interface for viewing COVID-related statistics during the pandemic.
 
-Covid-19 India cases Tracker Android Application.
+## Features
 
-All data is fetched from the API provided by covid19india.org
+* India COVID-19 statistics
+* Daily cases overview
+* State-wise reports
+* Testing information
+* Simple and minimal UI
 
-A big thank you to covid19india.org for the api.
+## Data Source
 
-Visit their webiste at: https://www.covid19india.org/
+This app originally used data from:
 
-## Download APK
+**COVID19India API**
+https://www.covid19india.org/
+
+A big thank you to the **covid19india.org** team for providing public COVID-19 data during the pandemic.
+
+## Important Note
+
+The original **COVID19India API service is no longer active**, so some functionality may not work as originally intended.
+
+This repository is preserved as a portfolio and learning project.
+
+## Download
 
 **[Download APK](https://github.com/nirajwagh/covid-19_india_android_app/releases/latest)**
 
-If installation is blocked on Android, enable Install Unknown Apps for your browser or file manager.
+If Android blocks installation, enable **Install Unknown Apps** for your browser or file manager.
 
-![Splash Screen](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/one.png)
+## Screenshots
 
-![Home Screen](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/two.png)
-
-![Cases Today](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/four.png)
-
-![Cases Today](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/five.png)
+<p align="center">
+  <img src="https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/one.png" width="220" alt="Splash Screen"/>
+  <img src="https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/two.png" width="220" alt="Home Screen"/>
+  <img src="https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/four.png" width="220" alt="Cases Today"/>
+  <img src="https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/five.png" width="220" alt="Statistics"/>
+</p>

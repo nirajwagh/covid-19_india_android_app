@@ -10,9 +10,11 @@ A big thank you to covid19india.org for the api.
 
 Visit their webiste at: https://www.covid19india.org/
 
-My Email : iamnirajwagh@gmail.com
+## Download APK
 
-Download apk: https://github.com/nirajwagh/covid-19_india_android_app/raw/master/apk%20download/Covid-19%20India.apk
+**[Download APK](https://github.com/nirajwagh/covid-19_india_android_app/releases/latest)**
+
+If installation is blocked on Android, enable Install Unknown Apps for your browser or file manager.
 
 ![Splash Screen](https://github.com/nirajwagh/covid-19_india_android_app/blob/master/Screenshots/one.png)
 

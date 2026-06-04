@@ -14,15 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DistrictWise"
-            android:screenOrientation="sensorPortrait"
-            ></activity>
-        <activity android:name=".SelectState"
-            android:screenOrientation="sensorPortrait"
-            />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="sensorPortrait" />
+
+
         <activity
             android:name=".AboutUs"
             android:screenOrientation="sensorPortrait" />
@@ -36,13 +29,15 @@
             android:name=".TodayCases"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".Splash"
-            android:screenOrientation="sensorPortrait">
+            android:name=".MainActivity"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

@@ -110,8 +110,9 @@ public class MainActivity extends AppCompatActivity {
         card_district.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this, SelectState.class);
-                startActivity(intent);
+                Toast.makeText(MainActivity.this,
+                        "Feature unavailable",
+                        Toast.LENGTH_LONG).show();
             }
         });
 
